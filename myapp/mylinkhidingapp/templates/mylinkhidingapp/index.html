@@ -1,0 +1,21 @@
+{% extends "obfuscate/base.html" %}
+ 
+{% block title %}URL Obfuscation{% endblock %}
+ 
+{% block content %}
+ 
+<div class="panel panel-default">
+ <div class="panel-body">
+ <div class="col-sm-9">
+ </br>
+ <input type="text" name="url" id="url" class="form-control input-sm" placeholder="https://www.retul.com/" />
+ </div>
+ <div class="col-sm-3">
+ {% csrf_token %}
+ </br>
+ <button id="submitButton" class="btn btn-primary">Create obfuscated URL</button></p> 
+ </div>
+ </div>
+ <div class="panel-footer"><span id="url-result">Enter the URL above</span></div>
+</div>
+{% endblock %}
